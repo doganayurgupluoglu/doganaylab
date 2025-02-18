@@ -45,3 +45,40 @@
     color: #C8AA6E;
     font-size: 20px;
 }
+/* Mobil uyumluluk */
+
+@media screen and (max-width: 768px) {
+    /* Navbar'ı mobilde dikey yap ve ortala */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Kartları mobilde alt alta hizala */
+    .kart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Kartların genişliğini mobilde küçült */
+    .kart {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
+    /* Başlığı ortala ve küçült */
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Resimleri mobilde ekran genişliğine göre ayarla */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
