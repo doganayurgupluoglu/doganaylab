@@ -1,0 +1,76 @@
+body{
+    background: radial-gradient(circle, #0A1428, #010A13);
+    color: #C8AA6E;
+}
+.h1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Başlık Resmi */
+.h1-container img {
+    width: 500px;
+    margin-right: 20px;
+    padding: 40px;
+}
+h2{
+    display: inline-block;
+    margin-left: 25px;
+    border-bottom: #C8AA6E dotted 1px;
+    padding: 8px;
+}
+hr {
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    border: 1px solid #C8AA6E;
+}
+details {
+    background-color: #0A1428;
+    width: 90%;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: #C8AA6E 0px 0px 4px;
+}
+details summary {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #010A13;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: #C8AA6E 0px 0px 1px;
+}
+details p {
+    font-size: 17px;
+    color: #C8AA6E;
+    padding: 0px;
+}
+details img {
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: #C8AA6E 0px 0px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.indetails {
+    background-color: #010A13;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: #C8AA6E 0px 0px 4px;
+    margin-top: 20px;
+}
+.detailsv3 {
+    margin-top: 25px;
+    width: auto;
+}
