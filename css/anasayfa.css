@@ -1,24 +1,6 @@
 body {
     background: radial-gradient(circle, #0A1428, #010A13);
 }
-
-/* Başlık Konteyneri */
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Başlık Resmi */
-.logo img {
-    width: 500px;
-    margin-right: 20px;
-    padding: 20px;
-}
-.not {
-    text-align: center;
-}
 hr {
     width: 80%;
     margin-top: 10px;

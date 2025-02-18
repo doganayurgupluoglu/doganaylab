@@ -24,3 +24,24 @@
     border-bottom: white 1px double !important;
     color: white !important;
 }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Başlık Resmi */
+.logo img {
+    width: 500px;
+    margin-right: 20px;
+    padding: 20px;
+}
+.not {
+    text-align: center;
+    padding: 10px;
+    margin-left: 25px;
+    font-weight: bold;
+    color: #C8AA6E;
+    font-size: 20px;
+}
