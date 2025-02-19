@@ -1,106 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Temel meta etiketleri ve karakter seti tanımlaması -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sürümler</title>
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/surum.css">
+    
+    <!-- Stil dosyaları bağlantıları -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Logo bölümü -->
     <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt=""></a>
+        <a href="index.html">
+            <img src="img/logo.png" alt="Site Logo">
+        </a>
     </div>
-    <p class="not"> Yeni birşeyler öğrendikçe ve vakit ayırabildiğim takdirde güncelleyeceğim</p>
-        <!-- Navbar -->
 
+    <!-- Bilgilendirme notu -->
+    <p class="not">
+        Yeni birşeyler öğrendikçe ve vakit ayırabildiğim takdirde güncelleyeceğim
+    </p>
+
+    <!-- Navigasyon menüsü -->
     <nav class="navbar">
         <a href="index.html">Anasayfa</a>
-        <a href="not.html">Notlarım</a> 
+        <a href="not.html">Notlarım</a>
         <a href="tavsiyeler.html">Tavsiyeler</a>
         <a href="surum.html">Sürüm Notları</a>
         <a href="kaynaklar.html">Kullandığım kaynaklar</a>
-        
     </nav>
 
-<!-- İLK SÜRÜM BAŞLANGIÇ   -->
+    <!-- Ana içerik bölümü -->
+    <h1>Sürümler ve Değişiklikler</h1>
 
-    <h1>Sürümler ve Değişiklikler </h1>
-
-<h2>V1</h2>
-<details>
-    <summary>V1 detaylarını gör </summary>
+    <!-- Sürüm 1 detayları -->
+    <h2>V1</h2>
+    <details>
+        <summary>V1 detaylarını gör</summary>
         <div class="indetails">
             <p>İlk sürümde websitesinin sadece html kullanarak iskeleti oluşturuldu henüz bir css koduna sahip değil ve görünümü şu şekilde</p>
             <hr>
             <a href="img/1.png" target="_blank">
-            <img src="img/1.png" alt="Sürüm 1" title="Sürüm 1" width=500>
+                <img src="img/1.png" alt="Sürüm 1" title="Sürüm 1" width="500">
             </a>
-        </div>    
+        </div>
     </details>
 
-<!-- İKİNCİ SÜRÜM BAŞLANGIÇ -->
+    <!-- Sürüm 2 detayları -->
+    <h2>V2</h2>
+    <details class="detailsv2">
+        <summary>V2 detaylarını gör</summary>
+        
+        <!-- CSS Değişiklikleri -->
+        <details class="detailsv3">
+            <summary>CSS Değişiklikleri</summary>
+            <div class="indetails">
+                <p>Anasayfaya bir arka plan rengi eklemek için css dosyasına şu kodu ekledim</p>
+                <pre><code>
+                    body {
+                        background-color: teal;
+                    }
+                </code></pre>
+                
+                <p>Ana sayfam çok düz ve kötü görünüyordu ve metinler sayfanın soluna yapışık halde duruyordu ufakda olsa metinlere bir düzen vermek için öğrendiğim birkaç css kodunu kullandım</p>
+                <pre><code>
+                    h1, h2, p {
+                        text-align: left;
+                        padding: 10px;
+                        margin-left: 25px;
+                    }
+                </code></pre>
+                
+                <p>Eski halinde birbirlerine yapışık görünüyordu aralarına açmak için oluşturduğum nav sınıfını kullanarak css'e şöyle bir kod ve linklerin rengini sabitleyip altına bir çizgi eklemek için border-bottom kullandım</p>
+                <pre><code>
+                    .nav {
+                        text-align: left;
+                        padding: 10px;
+                        margin-left: 10px;
+                    }
+                    a:visited, a:link {
+                        color: black;
+                        border-bottom: solid 1px black;
+                    }
+                </code></pre>
+            </div>
+        </details>
 
-<h2>V2</h2>
-<details class="detailsv2">
-    <summary>V2 detaylarını gör</summary>
-<details class="detailsv3">
-    <summary>CSS Değişiklikleri</summary>  
-    <div class="indetails">  
-<p>Anasayfaya bir arka plan rengi eklemek için css dosyasına şu kodu ekledim</p>
-        <pre><code>
-            body {
-            background-color: teal;
-            }
-        </code></pre> 
-<p>Ana sayfam çok düz ve kötü görünüyordu ve metinler sayfanın soluna yapışık halde duruyordu ufakda olsa metinlere bir düzen vermek için öğrendiğim birkaç css kodunu kullandım</p>
+        <!-- HTML Değişiklikleri -->
+        <details class="detailsv3">
+            <summary>HTML Değişiklikleri</summary>
+            <div class="indetails">
+                <p>Henüz navigasyon bar yapmayı bilmiyorum o yüzden bunları bir a etiketine atayıp sınıf olarakta nav atadım</p>
+                <pre><code>
+                    &lt;a class="nav" href="index.html"&gt;Anasayfa&lt;/a&gt;
+                    &lt;a class="nav" href="not.html"&gt;Notlarım&lt;/a&gt;
+                    &lt;a class="nav" href="tavsiyeler.html"&gt;Tavsiyeler&lt;/a&gt;
+                    &lt;a class="nav" href="surum.html"&gt;Sürüm Notları&lt;/a&gt;
+                    &lt;a class="nav" href="kaynaklar.html"&gt;Kullandığım kaynaklar&lt;/a&gt;
+                </code></pre>
 
-        <pre><code>
-            h1, h2, p {
-            text-align: left;
-            padding: 10px;
-            margin-left: 25px;
-            }
-        </code></pre>
-<p>Eski halinde birbirlerine yapışık görünüyordu aralarına açmak için oluşturduğum nav sınıfını kullanarak css'e şöyle bir kod ve linklerin rengini sabitleyip altına bir çizgi eklemek için border-bottom kullandım </p>
-
-    <pre><code>
-        .nav {
-        text-align: left;
-        padding: 10px;
-        margin-left: 10px;
-        }
-
-        a:visited, a:link {
-        color: black;
-        border-bottom: solid 1px black;
-        }
-    </code></pre>  
-    </div>
-</details>
-<details class="detailsv3"> 
-    <summary>HTML Değişiklikleri</summary>  
-    <div class="indetails">
-<p>Henüz navigasyon bar yapmayı bilmiyorum o yüzden bunları bir a etiketine atayıp sınıf olarakta nav atadım bu kısımda kodları nasıl metin olarak göstereceğimi bilmediğim için chat gpt'den yardım aldım</p>
-    <pre><code>
-        &lt;a class="nav" href="index.html"&gt;Anasayfa&lt;/a&gt;
-        &lt;a class="nav" href="not.html"&gt;Notlarım&lt;/a&gt;
-        &lt;a class="nav" href="tavsiyeler.html"&gt;Tavsiyeler&lt;/a&gt;
-        &lt;a class="nav" href="surum.html"&gt;Sürüm Notları&lt;/a&gt;
-        &lt;a class="nav" href="kaynaklar.html"&gt;Kullandığım kaynaklar&lt;/a&gt;
-    </code></pre>
-
-<!-- V2 Görünümü -->
-
-<p>Anasayfanın şuanki görünümü şu şekilde</p>
-
-<a href="img/v2.png" target="_blank">
-<img src="img/v2.png" alt="Css_kullandım" title="Css_kullandım" width=500>
-</a>
-</div>
-</details>   
-</details>
-
-
+                <!-- V2 Görünümü -->
+                <p>Anasayfanın şuanki görünümü şu şekilde</p>
+                <a href="img/v2.png" target="_blank">
+                    <img src="img/v2.png" alt="Css_kullandım" title="Css_kullandım" width="500">
+                </a>
+            </div>
+        </details>
+    </details>
 </body>
 </html>
