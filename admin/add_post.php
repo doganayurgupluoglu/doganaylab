@@ -49,6 +49,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+        }
+        
         .dashboard-container {
             display: grid;
             grid-template-columns: 250px 1fr;
@@ -56,6 +64,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             margin-top: 80px;
             min-height: calc(100vh - 80px);
             padding: 2rem;
+            max-width: 1800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .sidebar {
