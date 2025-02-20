@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa - Doganay Lab</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/9b300cf0c3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 <body>
+
+    <!-- ******HEADER****** -->
+     
     <header class="header">
         <nav class="menu">
             <ul>
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i>Ana Sayfa</a></li>
-                <li><a href="notlar.html"><i class="fas fa-book"></i>Notlar</a></li>
-                <li><a href="kaynaklar.html"><i class="fas fa-link"></i>Kaynaklar</a></li>
-                <li><a href="guncellemeler.html"><i class="fas fa-clock"></i>Güncellemeler</a></li>
-                <li><a href="hakkimda.html"><i class="fas fa-user"></i>Hakkımda</a></li>
-                <li><a href="sosyal.html"><i class="fas fa-share-alt"></i>Sosyal</a></li>
+                <li>              
+                    <a href="index.html" class="anasayfa"><i class="fa fa-house"></i>  Ana sayfa</a>
+                </li>
+                <li>
+                    <a href="index.html" class="notlar"><i class="fa-solid fa-pencil"></i>  Notlar</a>
+                </li>
+                <li>
+                    <a href="index.html" class="kaynaklar"><i class="fa-solid fa-folder-open"></i>  Kaynaklar</a>
+                </li>
+                <li>               
+                    <a href="index.html" class="guncelleme"><i class="fa-solid fa-code"></i>  Güncellemeler</a>
+                </li>
+                <li>               
+                    <a href="index.html" class="hakkimda"><i class="fa-solid fa-user"></i>  Hakkımda</a>
+                </li>
+                <li>                
+                    <a href="index.html" class="sosyal"><i class="fa-solid fa-thumbs-up"></i>  Sosyal Medya</a>
+                </li>
             </ul>
-        </nav>
+            </nav>
     </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Doganay Lab'a Hoş Geldiniz</h1>
-            <p>Yazılım geliştirme yolculuğumda edindiğim deneyimleri ve bilgileri paylaştığım dijital laboratuvarım.</p>
-            <div class="hero-buttons">
-                <a href="#content" class="btn btn-primary">Keşfet</a>
-                <a href="hakkimda.html" class="btn btn-secondary">Hakkımda</a>
-            </div>
-        </div>
-    </section>
-
+    <div class="banner">
+        <h1>Doganay Lab'a Hoşgeldiniz</h1>
+        <p>Front-end web geliştirme öğrenim sürecimde deneyimler edindikçe<p> web sitemin tasarımını şekillendireceğim.</p>
+    </div>  
+    
     <div class="container">
-        <main class="content" id="content">
+        <div class="content">
             <div class="kart">
                 <h2>Bu Web Sitesi Neden Var?</h2>
                 <hr>
@@ -65,73 +75,9 @@
                 <hr>
                 <p>Zamanla gelişen, büyüyen ve değişen bir projeye tanıklık etmek istersen, takipte kal. Burada her şey gelişime açık ve en önemlisi, tamamen doğal bir akış içinde ilerleyecek. Çünkü bu sadece bir web sitesi değil; bir gelişim hikayesi. 🚀</p>
             </div>
-        </main>
-
-        <aside class="aside">
-            <section class="quick-links">
-                <h3><i class="fas fa-bolt"></i> Hızlı Erişim</h3>
-                <ul class="aside-list">
-                    <li><a href="#"><i class="fas fa-star"></i>Öne Çıkan İçerikler</a></li>
-                    <li><a href="#"><i class="fas fa-clock"></i>Son Güncellemeler</a></li>
-                    <li><a href="#"><i class="fas fa-code"></i>Kod Örnekleri</a></li>
-                    <li><a href="#"><i class="fas fa-lightbulb"></i>İpuçları</a></li>
-                </ul>
-            </section>
-
-            <section class="recent-activities">
-                <h3><i class="fas fa-history"></i> Son Aktiviteler</h3>
-                <ul class="activity-list">
-                    <li>
-                        <i class="fas fa-edit"></i>
-                        <div class="activity-content">
-                            <p>CSS Grid sistemi hakkında yeni bir makale</p>
-                            <span class="activity-date">2 saat önce</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-code-branch"></i>
-                        <div class="activity-content">
-                            <p>JavaScript projesi güncellendi</p>
-                            <span class="activity-date">1 gün önce</span>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="skills">
-                <h3><i class="fas fa-chart-bar"></i> İstatistikler</h3>
-                <div class="skill-item">
-                    <span class="skill-name">HTML5</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress html"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">CSS3</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress css"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress js"></div>
-                    </div>
-                </div>
-            </section>
-        </aside>
-    </div>
-
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
+        </div>
+    <aside class="aside">      
+    </aside>
+</div>
 </body>
 </html>
