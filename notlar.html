@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notlar - Doganay Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Doganay Lab Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                <li><a href="notlar.html" class="active"><i class="fas fa-book"></i>Notlar</a></li>
+                <li><a href="kaynaklar.html"><i class="fas fa-link"></i>Kaynaklar</a></li>
+                <li><a href="guncellemeler.html"><i class="fas fa-clock"></i>Güncellemeler</a></li>
+                <li><a href="hakkimda.html"><i class="fas fa-user"></i>Hakkımda</a></li>
+                <li><a href="sosyal.html"><i class="fas fa-share-alt"></i>Sosyal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Öğrenme Notlarım</h1>
+            <p>Front-end geliştirme yolculuğumda edindiğim bilgileri ve deneyimleri paylaştığım notlar.</p>
+            <div class="hero-buttons">
+                <a href="#content" class="btn btn-primary">Notlara Göz At</a>
+                <a href="kaynaklar.html" class="btn btn-secondary">Kaynakları İncele</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <main class="content" id="content">
+            <div class="kart">
+                <h2>HTML Temelleri</h2>
+                <p>HTML (Hypertext Markup Language), web sayfalarının yapısını oluşturan temel işaretleme dilidir. İşte öğrendiğim temel HTML etiketleri ve kullanımları:</p>
+                <ul class="note-list">
+                    <li>Başlık etiketleri (h1-h6)</li>
+                    <li>Paragraf etiketi (p)</li>
+                    <li>Bağlantı etiketi (a)</li>
+                    <li>Görsel etiketi (img)</li>
+                </ul>
+            </div>
+            
+            <div class="kart">
+                <h2>CSS İpuçları</h2>
+                <p>CSS (Cascading Style Sheets) ile web sayfalarını stilize etmeyi öğrenirken edindiğim bazı önemli bilgiler:</p>
+                <ul class="note-list">
+                    <li>Flexbox kullanımı</li>
+                    <li>Grid sistemleri</li>
+                    <li>Responsive tasarım</li>
+                    <li>CSS değişkenleri</li>
+                </ul>
+            </div>
+            
+            <div class="kart">
+                <h2>JavaScript Notları</h2>
+                <p>JavaScript öğrenme sürecimde karşılaştığım önemli konular ve çözümler:</p>
+                <ul class="note-list">
+                    <li>DOM manipülasyonu</li>
+                    <li>Event handling</li>
+                    <li>Asenkron programlama</li>
+                    <li>API kullanımı</li>
+                </ul>
+            </div>
+        </main>
+
+        <aside class="aside">
+            <section class="quick-links">
+                <h3><i class="fas fa-bolt"></i> Önemli Bağlantılar</h3>
+                <ul class="aside-list">
+                    <li><a href="#"><i class="fas fa-code"></i>HTML Dokümantasyon</a></li>
+                    <li><a href="#"><i class="fas fa-paint-brush"></i>CSS Referansları</a></li>
+                    <li><a href="#"><i class="fas fa-js"></i>JavaScript Kaynakları</a></li>
+                </ul>
+            </section>
+
+            <section class="recent-activities">
+                <h3><i class="fas fa-history"></i> Son Eklenenler</h3>
+                <ul class="activity-list">
+                    <li>
+                        <i class="fas fa-file-code"></i>
+                        <div class="activity-content">
+                            <p>CSS Grid Sistemleri</p>
+                            <span class="activity-date">3 gün önce</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <div class="activity-content">
+                            <p>JavaScript Event Loop</p>
+                            <span class="activity-date">1 hafta önce</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 

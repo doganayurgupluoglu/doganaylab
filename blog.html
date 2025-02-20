@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Doganay Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                <li><a href="notlar.html"><i class="fas fa-book"></i>Notlar</a></li>
+                <li><a href="kaynaklar.html"><i class="fas fa-link"></i>Kaynaklar</a></li>
+                <li><a href="guncellemeler.html"><i class="fas fa-clock"></i>Güncellemeler</a></li>
+                <li><a href="hakkimda.html"><i class="fas fa-user"></i>Hakkımda</a></li>
+                <li><a href="blog.html" class="active"><i class="fas fa-pen"></i>Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Blog Yazılarım</h1>
+            <p>Front-end geliştirme yolculuğumda edindiğim deneyimleri ve öğrendiklerimi paylaştığım yazılar.</p>
+            <div class="hero-buttons">
+                <a href="#latest" class="btn btn-primary">Son Yazılar</a>
+                <a href="#categories" class="btn btn-secondary">Kategoriler</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <main class="content" id="latest">
+            <div class="kart">
+                <h2>Son Yazılar</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="placeholder.jpg" alt="Blog Post 1">
+                        </div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">HTML & CSS</span>
+                            <h3>CSS Grid Sistemini Anlamak</h3>
+                            <p class="blog-excerpt">Modern web tasarımında CSS Grid kullanımı ve en iyi pratikler...</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 15 Şubat 2024</span>
+                                <span><i class="far fa-clock"></i> 5 dk okuma</span>
+                            </div>
+                            <a href="blog-post.html" class="btn btn-secondary">Devamını Oku</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="placeholder.jpg" alt="Blog Post 2">
+                        </div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">JavaScript</span>
+                            <h3>JavaScript Promise'ler</h3>
+                            <p class="blog-excerpt">Asenkron programlamayı anlamak ve Promise yapısını efektif kullanmak...</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 10 Şubat 2024</span>
+                                <span><i class="far fa-clock"></i> 8 dk okuma</span>
+                            </div>
+                            <a href="blog-post.html" class="btn btn-secondary">Devamını Oku</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="kart" id="categories">
+                <h2>Kategoriler</h2>
+                <div class="category-grid">
+                    <a href="#" class="category-card">
+                        <i class="fas fa-code"></i>
+                        <h3>HTML & CSS</h3>
+                        <span class="post-count">5 yazı</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <span class="post-count">3 yazı</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX</h3>
+                        <span class="post-count">2 yazı</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                        <span class="post-count">4 yazı</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <aside class="aside">
+            <section class="quick-links">
+                <h3><i class="fas fa-tags"></i> Popüler Etiketler</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">HTML5</a>
+                    <a href="#" class="tag">CSS3</a>
+                    <a href="#" class="tag">JavaScript</a>
+                    <a href="#" class="tag">Flexbox</a>
+                    <a href="#" class="tag">Grid</a>
+                    <a href="#" class="tag">Responsive</a>
+                </div>
+            </section>
+
+            <section class="recent-activities">
+                <h3><i class="fas fa-fire"></i> Popüler Yazılar</h3>
+                <ul class="activity-list">
+                    <li>
+                        <i class="fas fa-star"></i>
+                        <div class="activity-content">
+                            <p>CSS Grid vs Flexbox</p>
+                            <span class="activity-date">2.5K okuma</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-star"></i>
+                        <div class="activity-content">
+                            <p>JavaScript Temelleri</p>
+                            <span class="activity-date">1.8K okuma</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 

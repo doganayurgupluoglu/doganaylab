@@ -1,104 +1,140 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
-    <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doganay Lab</title>
+    <title>Ana Sayfa - Doganay Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
-    <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt=""></a>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Doganay Lab Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                <li><a href="notlar.html"><i class="fas fa-book"></i>Notlar</a></li>
+                <li><a href="kaynaklar.html"><i class="fas fa-link"></i>Kaynaklar</a></li>
+                <li><a href="guncellemeler.html"><i class="fas fa-clock"></i>Güncellemeler</a></li>
+                <li><a href="hakkimda.html"><i class="fas fa-user"></i>Hakkımda</a></li>
+                <li><a href="sosyal.html"><i class="fas fa-share-alt"></i>Sosyal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Doganay Lab'a Hoş Geldiniz</h1>
+            <p>Yazılım geliştirme yolculuğumda edindiğim deneyimleri ve bilgileri paylaştığım dijital laboratuvarım.</p>
+            <div class="hero-buttons">
+                <a href="#content" class="btn btn-primary">Keşfet</a>
+                <a href="hakkimda.html" class="btn btn-secondary">Hakkımda</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <main class="content" id="content">
+            <div class="kart">
+                <h2>Bu Web Sitesi Neden Var?</h2>
+                <hr>
+                <p>Bu web sitesinin oluşturulma amacı, internette kendime ait bir alanımın olmasını etkileyici bulmam. Evet, böyle söyleyince çok büyük bir şey gibi durmuyor olabilir.</p>
+
+               <p> Ancak şöyle düşünün: Gerçek dünyada bir araziniz var ve üzerine hayalini kurduğunuz yapıyı inşa etmek için farklı meslek gruplarına, farklı yeteneklere ve elbette maddi kaynaklara ihtiyacınız var. Fakat internette, size ayrılmış bir alanda, sadece kendi çabanızla ve öğrenme sürecinizle hayal ettiğiniz şeyi inşa etmek mümkün.</p>          
+            </div>
+            <div class="kart">
+                <h2>Burada Neler Paylaşacağım?</h2>
+                <hr>
+                <p>Peki, ben bu fırsatı nasıl değerlendireceğim? Buna bir iş modeli olarak bakmıyorum, bu tamamen benim hobim. Burada, front-end web geliştirme sürecimi başlangıç seviyesinden itibaren paylaşacağım. Kendi yeteneklerimi geliştirdikçe, bu sitenin nasıl evrildiğini takipçilerimle birlikte gözlemleyeceğiz.</p>
+                <p>Ayrıca benim gibi sıfırdan alaylı olarak başlayanlar için yukarıda yer alan notlar ve tavsiyeler sayfasında, kendi deneyimlerimden yola çıkarak faydalı bilgiler paylaşacağım. Sürüm kısmında ise sayfanın görünüşünde köklü bir değişiklik var ise nelerin değiştiğini ve ekran resmini paylaşacağım.</p> 
+            </div>
+            <div class="kart">
+                <h2>Hatadan Korkma, Öğrenmeye Açık Ol</h2>
+                <hr>
+                <p> Burada sadece kodları değil, aynı zamanda öğrendiklerimi, karşılaştığım zorlukları, çözümlerimi ve belki de bazen çıkmazlarımı da paylaşacağım. Çünkü öğrenmenin en güzel yanı, süreci şeffaf bir şekilde yaşayarak başkalarına da ilham verebilmektir.</p>
+
+                    <p>Eğer benimle benzer bir yolda ilerliyorsan veya sadece merak ediyorsan, bu web sitesi senin için de bir kaynak ve ilham noktası olabilir.</p>
+            </div>
+            <div class="kart">
+                <h2>Bu Bir Keşif Yolculuğu</h2>
+                <hr>
+                <p>Bu süreç, benim için sadece teknik bir öğrenme yolculuğu değil, aynı zamanda bir keşif alanı. Kendi alanımı inşa ederken, denemeler yapacak, hata yapacak, düzeltecek ve gelişeceğim. İlk başta basit görünen şeylerin zamanla nasıl daha derinleştiğini ve nasıl bir ustalığa dönüştüğünü hep birlikte göreceğiz. </p>
+            </div>
+            <div class="kart">
+                <h2>Birlikte Gelişelim!</h2>
+                <hr>
+                <p>Zamanla gelişen, büyüyen ve değişen bir projeye tanıklık etmek istersen, takipte kal. Burada her şey gelişime açık ve en önemlisi, tamamen doğal bir akış içinde ilerleyecek. Çünkü bu sadece bir web sitesi değil; bir gelişim hikayesi. 🚀</p>
+            </div>
+        </main>
+
+        <aside class="aside">
+            <section class="quick-links">
+                <h3><i class="fas fa-bolt"></i> Hızlı Erişim</h3>
+                <ul class="aside-list">
+                    <li><a href="#"><i class="fas fa-star"></i>Öne Çıkan İçerikler</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i>Son Güncellemeler</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i>Kod Örnekleri</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i>İpuçları</a></li>
+                </ul>
+            </section>
+
+            <section class="recent-activities">
+                <h3><i class="fas fa-history"></i> Son Aktiviteler</h3>
+                <ul class="activity-list">
+                    <li>
+                        <i class="fas fa-edit"></i>
+                        <div class="activity-content">
+                            <p>CSS Grid sistemi hakkında yeni bir makale</p>
+                            <span class="activity-date">2 saat önce</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-code-branch"></i>
+                        <div class="activity-content">
+                            <p>JavaScript projesi güncellendi</p>
+                            <span class="activity-date">1 gün önce</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="skills">
+                <h3><i class="fas fa-chart-bar"></i> İstatistikler</h3>
+                <div class="skill-item">
+                    <span class="skill-name">HTML5</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress html"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">CSS3</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress css"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress js"></div>
+                    </div>
+                </div>
+            </section>
+        </aside>
     </div>
-    <p class="not"> Yeni birşeyler öğrendikçe ve vakit ayırabildiğim takdirde semantic html yapısına güncelleyeceğim</p>
-        <!-- Navbar -->
 
-    <nav class="navbar">
-        <a href="index.html">Anasayfa</a>
-        <a href="not.html">Notlarım</a> 
-        <a href="tavsiyeler.html">Tavsiyeler</a>
-        <a href="surum.html">Sürüm Notları</a>
-        <a href="kaynaklar.html">Kullandığım kaynaklar</a>
-        
-    </nav>
-    
-<br>
-<br>
-
-            <!-- Content -->
-        <!-- Birinci Kart konteyner'ı-->         
-        
-    <div class="kart-container">
-        <div class="kart">
-            <h2>Bu Web Sitesi Neden Var?</h2>
-            <hr>
-            <p>
-                Bu web sitesinin oluşturulma amacı, internette kendime ait bir alanımın olmasını etkileyici bulmam. 
-                Evet, böyle söyleyince çok büyük bir şey gibi durmuyor olabilir. 
-                <p>Ancak şöyle düşünün:  
-                Gerçek dünyada bir araziniz var ve üzerine hayalini kurduğunuz yapıyı inşa etmek için  
-                farklı meslek gruplarına, farklı yeteneklere ve elbette maddi kaynaklara ihtiyacınız var.  
-                Fakat internette, size ayrılmış bir alanda, sadece kendi çabanızla ve öğrenme sürecinizle  
-                hayal ettiğiniz şeyi inşa etmek mümkün. </p>
-            </p>
-        </div>
-    
-    
-        <div class="kart">
-            <h2>Burada Neler Paylaşacağım?</h2>
-            <hr>
-            <p>
-                Peki, ben bu fırsatı nasıl değerlendireceğim? Buna bir iş modeli olarak bakmıyorum,  
-                bu tamamen benim hobim. Burada, front-end web geliştirme sürecimi başlangıç seviyesinden itibaren  
-                paylaşacağım. Kendi yeteneklerimi geliştirdikçe, bu sitenin nasıl evrildiğini takipçilerimle  
-                birlikte gözlemleyeceğiz. 
-                <p>Ayrıca benim gibi sıfırdan alaylı olarak başlayanlar için yukarıda yer alan notlar ve tavsiyeler sayfasında, kendi deneyimlerimden yola çıkarak faydalı bilgiler paylaşacağım. Sürüm kısmında ise sayfanın görünüşünde köklü bir değişiklik var ise nelerin değiştiğini ve ekran resmini paylaşacağım.</p>
-            </p>
-        </div>
-        <div class="kart">
-            <h2>Hatadan Korkma, Öğrenmeye Açık Ol</h2>
-            <hr>
-            <p>
-                Burada sadece kodları değil, aynı zamanda öğrendiklerimi, karşılaştığım zorlukları,  
-                çözümlerimi ve belki de bazen çıkmazlarımı da paylaşacağım. Çünkü öğrenmenin en güzel yanı,  
-                süreci şeffaf bir şekilde yaşayarak başkalarına da ilham verebilmektir. <p>Eğer benimle benzer bir  
-                yolda ilerliyorsan veya sadece merak ediyorsan, bu web sitesi senin için de bir kaynak ve  
-                ilham noktası olabilir.</p>
-            </p>
-        </div>
-    </div>
-
-        <!-- İkinci Kart konteyner'ı -->
-
-    <div class="kart-container2">
-        <div class="kart1">
-            <h2>Bu Bir Keşif Yolculuğu</h2>
-            <hr>
-            <p>
-                Bu süreç, benim için sadece teknik bir öğrenme yolculuğu değil, aynı zamanda bir keşif alanı.  
-                Kendi alanımı inşa ederken, denemeler yapacak, hata yapacak, düzeltecek ve gelişeceğim.  
-                İlk başta basit görünen şeylerin zamanla nasıl daha derinleştiğini ve nasıl bir ustalığa  
-                dönüştüğünü hep birlikte göreceğiz.
-            </p>
-        </div>
-        <div class="instagram-kart">
-            <a href="https://instagram.com/doganay.urguplu" target="_blank" title="Instagram Profilim">
-                <img src="img/ig.png" width="300" alt="instagram" title="Instagram Profilim">
-                <p>İnstagram Profilim</p>
-            </a>
-        </div>
-        <div class="kart1">
-            <h2>Birlikte Gelişelim!</h2>
-            <hr>
-            <p>
-                Zamanla gelişen, büyüyen ve değişen bir projeye tanıklık etmek istersen, takipte kal.  
-                Burada her şey gelişime açık ve en önemlisi, tamamen doğal bir akış içinde ilerleyecek.  
-                Çünkü bu sadece bir web sitesi değil; bir gelişim hikayesi. 🚀
-            </p>
-        </div>
-    </div>
-</div>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
