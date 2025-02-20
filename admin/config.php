@@ -17,21 +17,9 @@ if($conn === false){
     die("HATA: Veritabanına bağlanılamadı. " . mysqli_connect_error());
 }
 
-// Bağlantı başarılı mı test et
-$test_query = "SELECT * FROM users WHERE username = 'admin'";
-$result = mysqli_query($conn, $test_query);
-
-if($result){
-    $row = mysqli_fetch_assoc($result);
-    if($row){
-        // echo "Admin kullanıcısı bulundu!";
-    } else {
-        // echo "Admin kullanıcısı bulunamadı!";
-    }
-} else {
-    die("HATA: Sorgu çalıştırılamadı. " . mysqli_error($conn));
-}
-
 // UTF-8 karakter setini ayarla
 mysqli_set_charset($conn, "utf8");
+
+// Debug için bağlantı durumunu yazdır
+error_log("Veritabanı bağlantısı başarılı");
 ?> 
