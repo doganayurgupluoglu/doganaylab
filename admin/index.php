@@ -13,6 +13,9 @@ $username = $password = "";
 $username_err = $password_err = $login_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    // Debug için POST verilerini kontrol et
+    error_log("POST verileri: " . print_r($_POST, true));
+    
     // Kullanıcı adı boş mu kontrol et
     if(empty(trim($_POST["username"]))){
         $username_err = "Lütfen kullanıcı adını girin.";
@@ -29,19 +32,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Giriş bilgilerini doğrula
     if(empty($username_err) && empty($password_err)){
+        // Debug için veritabanı bağlantısını kontrol et
+        error_log("Veritabanı bağlantısı durumu: " . ($conn ? "Başarılı" : "Başarısız"));
+        
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
         
         if($stmt = mysqli_prepare($conn, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             $param_username = $username;
             
+            // Debug için SQL sorgusunu kontrol et
+            error_log("SQL sorgusu: " . $sql . " (username = " . $username . ")");
+            
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
+                
+                // Debug için bulunan satır sayısını kontrol et
+                error_log("Bulunan kullanıcı sayısı: " . mysqli_stmt_num_rows($stmt));
                 
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
+                        // Debug için şifre kontrolünü göster
+                        error_log("Girilen şifre: " . $password);
+                        error_log("Veritabanındaki hash: " . $hashed_password);
+                        
                         if(password_verify($password, $hashed_password)){
+                            error_log("Şifre doğrulama başarılı!");
                             session_start();
                             
                             $_SESSION["loggedin"] = true;
@@ -50,13 +67,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             header("location: dashboard.php");
                         } else{
+                            error_log("Şifre doğrulama başarısız!");
                             $login_err = "Geçersiz kullanıcı adı veya şifre.";
                         }
                     }
                 } else{
+                    error_log("Kullanıcı bulunamadı!");
                     $login_err = "Geçersiz kullanıcı adı veya şifre.";
                 }
             } else{
+                error_log("SQL sorgusu çalıştırılamadı: " . mysqli_error($conn));
                 echo "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
             }
 
