@@ -26,6 +26,7 @@ require_once "config.php";
             gap: 2rem;
             margin-top: 80px;
             min-height: calc(100vh - 80px);
+            padding: 2rem;
         }
 
         .sidebar {
@@ -74,7 +75,10 @@ require_once "config.php";
         }
 
         .main-content {
+            background: var(--card-bg);
+            border-radius: 16px;
             padding: 2rem;
+            border: 1px solid var(--border);
         }
 
         .dashboard-header {
@@ -82,6 +86,8 @@ require_once "config.php";
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
         }
 
         .stats-grid {
@@ -92,11 +98,11 @@ require_once "config.php";
         }
 
         .stat-card {
-            background: var(--card-bg);
+            background: var(--surface);
             border-radius: 16px;
             padding: 1.5rem;
-            border: 1px solid var(--border);
             text-align: center;
+            border: 1px solid var(--border);
         }
 
         .stat-card i {
@@ -117,10 +123,7 @@ require_once "config.php";
         }
 
         .recent-posts {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 1.5rem;
-            border: 1px solid var(--border);
+            margin-top: 2rem;
         }
 
         .post-list {
@@ -173,16 +176,6 @@ require_once "config.php";
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="menu">
-            <ul>
-                <li><a href="../index.html"><i class="fas fa-globe"></i>Siteyi Görüntüle</a></li>
-                <li><a href="dashboard.php" class="active"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
-                <li><a href="logout.php" class="btn-logout"><i class="fas fa-sign-out-alt"></i>Çıkış Yap</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <div class="dashboard-container">
         <aside class="sidebar">
             <ul class="sidebar-menu">
@@ -190,8 +183,8 @@ require_once "config.php";
                 <li><a href="posts.php"><i class="fas fa-file-alt"></i>Blog Yazıları</a></li>
                 <li><a href="categories.php"><i class="fas fa-folder"></i>Kategoriler</a></li>
                 <li><a href="comments.php"><i class="fas fa-comments"></i>Yorumlar</a></li>
-                <li><a href="users.php"><i class="fas fa-users"></i>Kullanıcılar</a></li>
                 <li><a href="settings.php"><i class="fas fa-cog"></i>Ayarlar</a></li>
+                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Çıkış Yap</a></li>
             </ul>
         </aside>
 
@@ -278,16 +271,5 @@ require_once "config.php";
             </div>
         </main>
     </div>
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html> 

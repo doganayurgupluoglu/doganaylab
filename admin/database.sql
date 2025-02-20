@@ -1,7 +1,3 @@
--- Veritabanını oluştur
-CREATE DATABASE IF NOT EXISTS doganay_blog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE doganay_blog;
-
 -- Kullanıcılar tablosu
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,

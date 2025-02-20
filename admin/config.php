@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', 'your_hostinger_mysql_host');
-define('DB_USERNAME', 'your_hostinger_db_username');
-define('DB_PASSWORD', 'your_hostinger_db_password');
-define('DB_NAME', 'your_hostinger_db_name');
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'u426745395_doganaylab');
+define('DB_PASSWORD', '4G9eqoqxNSIE0l');
+define('DB_NAME', 'u426745395_doganaylab_db');
 
 // Veritabanı bağlantısını oluştur
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
