@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Hostinger'ın MySQL sunucu adresi
-define('DB_SERVER', 'auth-db1798.hstgr.io');  // Hostinger MySQL sunucusu
+// Hostinger'da localhost kullan
+define('DB_SERVER', 'localhost');  // Hostinger'da yerel MySQL sunucusu
 define('DB_USERNAME', 'u426745395_doganaylab');
 define('DB_PASSWORD', '4G9eqoqxNSIE0l');
 define('DB_NAME', 'u426745395_doganaylab_db');
