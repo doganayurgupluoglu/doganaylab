@@ -13,6 +13,15 @@ Bu web sitesi, front-end geliştirme yolculuğumun canlı bir günlüğü niteli
 - Deneyimlerimi başkalarıyla paylaşmak
 - Kendi dijital alanımı oluşturmak
 
+## 🚀 Son Güncellemeler
+
+### Tema Değiştirme Özelliği (14.02.2024)
+- Aydınlık/Karanlık mod desteği eklendi
+- Tema değiştirme butonu menüye entegre edildi
+- Animasyonlu geçiş efektleri eklendi
+- Tema tercihi tarayıcıda kaydediliyor
+- Şık ve minimal tasarımlı toggle butonu
+
 ## 🛠️ Kullanılan Teknolojiler
 
 - **HTML5**: Semantik yapı ve modern HTML özellikleri
@@ -26,6 +35,7 @@ Bu web sitesi, front-end geliştirme yolculuğumun canlı bir günlüğü niteli
   - DOM manipülasyonu
   - Scroll olayları
   - Dinamik içerik güncellemeleri
+- **Font Awesome Icons**: İkonlar için
 
 ## 📂 Proje Yapısı
 

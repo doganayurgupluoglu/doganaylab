@@ -62,4 +62,29 @@ function updateDuration() {
 updateDuration();
 
 // Her gün güncelle
-setInterval(updateDuration, 24 * 60 * 60 * 1000); 
+setInterval(updateDuration, 24 * 60 * 60 * 1000);
+
+// Theme switching functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const lightModeBtn = document.getElementById('lightMode');
+    const darkModeBtn = document.getElementById('darkMode');
+    const root = document.documentElement;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        root.classList.add('dark-mode');
+    }
+
+    // Light mode button click handler
+    lightModeBtn.addEventListener('click', () => {
+        root.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    });
+
+    // Dark mode button click handler
+    darkModeBtn.addEventListener('click', () => {
+        root.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    });
+}); 

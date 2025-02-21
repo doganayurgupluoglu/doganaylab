@@ -32,6 +32,105 @@
         rgba(13, 26, 52, 0.32) 90%,
         rgba(12, 24, 48, 0.32) 100%
     );
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}
+
+:root.dark-mode {
+    filter: invert(0);
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+    height: 35px;
+    padding: 0 5px;
+    background: rgba(12, 24, 48, 0.3);
+    border-radius: 20px;
+    width: 75px;
+    justify-content: space-between;
+    border: 1px solid rgba(200, 170, 110, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: rgba(200, 170, 110, 0.4);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin: 6px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.theme-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.theme-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Switch Animation */
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root.dark-mode .theme-toggle::before {
+    transform: translate(49px, -50%);
+}
+
+#lightMode {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#darkMode {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root.dark-mode #lightMode {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+:root.dark-mode #darkMode {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* ******TEMEL SAYFA AYARLARI****** */
