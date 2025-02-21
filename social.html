@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    Bu HTML dosyası, sosyal medya hesaplarımı ve iletişim bilgilerimi içerir.
+    Sayfa yapısı:
+    1. Header: Sabit pozisyonlu navigasyon menüsü
+    2. Banner: Sayfa başlığı ve kısa açıklama
+    3. Container: İki sütunlu ana içerik bölümü
+        - Content: Sosyal medya kartları (GitHub, YouTube, Instagram, E-posta)
+        - Aside: Yan bilgi paneli (öğrenim süreci, kaynaklar, hedefler, istatistikler)
+    
+    Her sosyal medya kartı şunları içerir:
+    - Platform ikonu
+    - Platform adı
+    - Kısa açıklama
+    - Profil bağlantısı
+-->
 <head>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -18,6 +33,7 @@
     <title>Sosyal Medya - Doganay Lab</title>
 </head>
 <body>
+    <!-- ******HEADER BAŞLANGICI****** -->
     <header class="header">
         <nav class="menu">
             <ul>
@@ -43,17 +59,22 @@
         </nav>
     </header>
 
+    <!-- ******BANNER BAŞLANGICI****** -->
     <div class="banner sub-page">
         <h1>Sosyal Medya</h1>
         <p>Benimle iletişime geçebileceğiniz platformlar ve iletişim bilgilerim.</p>
     </div>  
     
+    <!-- ******ANA İÇERİK BAŞLANGICI****** -->
     <div class="container">
+        <!-- ******SOSYAL MEDYA KARTLARI BAŞLANGICI****** -->
         <div class="content">
             <div class="kart notes-card">
                 <h2>Sosyal Medya Hesaplarım</h2>
                 <hr>
+                <!-- ******SOSYAL MEDYA KARTLARI CONTAINER BAŞLANGICI****** -->
                 <div class="social-cards-container">
+                    <!-- ******GITHUB KARTI****** -->
                     <div class="social-card">
                         <i class="fab fa-github icon"></i>
                         <h3>GitHub</h3>
@@ -64,6 +85,7 @@
                         </a>
                     </div>
 
+                    <!-- ******YOUTUBE KARTI****** -->
                     <div class="social-card">
                         <i class="fab fa-youtube icon"></i>
                         <h3>YouTube</h3>
@@ -74,6 +96,7 @@
                         </a>
                     </div>
 
+                    <!-- ******INSTAGRAM KARTI****** -->
                     <div class="social-card">
                         <i class="fab fa-instagram icon"></i>
                         <h3>Instagram</h3>
@@ -84,6 +107,7 @@
                         </a>
                     </div>
 
+                    <!-- ******E-POSTA KARTI****** -->
                     <div class="social-card">
                         <i class="fa-regular fa-envelope icon"></i>
                         <h3>E-posta</h3>
@@ -97,6 +121,7 @@
             </div>
         </div>
 
+        <!-- ******YAN PANEL BAŞLANGICI****** -->
         <aside class="aside">
             <div class="aside-card">
                 <h3><i class="fa-solid fa-code icon"></i>Öğrenim Süreci</h3>

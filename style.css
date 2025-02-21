@@ -1,16 +1,49 @@
+/* ******CSS DEĞİŞKENLERİ VE KÖK AYARLARI****** */
+/* 
+    Bu bölümde, web sitesinde kullanılan:
+    - Renk paletleri
+    - Geçiş efektleri
+    - Gradient tanımları
+    - Diğer tekrar eden değerler
+    tanımlanmıştır.
+*/
 :root {
     --primary-color: #C8AA6E;
     --primary-hover: #db9200;
-    --bg-dark: rgba(6, 14, 29, 0.856);
-    --bg-card: rgba(10, 20, 40, 0.5);
-    --bg-card-light: rgba(10, 20, 40, 0.308);
-    --text-light: rgba(255, 255, 255, 0.738);
-    --border-color: rgba(200, 170, 110, 0.1);
+    --bg-dark: rgba(8, 16, 32, 0.97);
+    --bg-card: rgba(12, 24, 48, 0.35);
+    --bg-card-light: rgba(15, 30, 60, 0.35);
+    --text-light: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(200, 170, 110, 0.15);
     --transition-default: all 0.3s ease;
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
     --gradient-dark: linear-gradient(135deg, rgba(10, 20, 40, 0.904), rgba(15, 30, 60, 0.904));
+    --gradient-card: linear-gradient(
+        100deg,
+        rgba(12, 24, 48, 0.32) 0%,
+        rgba(13, 26, 52, 0.32) 10%,
+        rgba(14, 28, 56, 0.33) 20%,
+        rgba(15, 30, 60, 0.33) 30%,
+        rgba(16, 32, 64, 0.34) 40%,
+        rgba(18, 36, 72, 0.34) 50%,
+        rgba(16, 32, 64, 0.34) 60%,
+        rgba(15, 30, 60, 0.33) 70%,
+        rgba(14, 28, 56, 0.33) 80%,
+        rgba(13, 26, 52, 0.32) 90%,
+        rgba(12, 24, 48, 0.32) 100%
+    );
 }
 
+/* ******TEMEL SAYFA AYARLARI****** */
+/* 
+    HTML ve Body elementlerinin:
+    - Margin ve padding sıfırlama
+    - Box-sizing ayarları
+    - Arka plan rengi
+    - Yazı tipi ve boyutu
+    - Genel metin özellikleri
+    ayarları yapılmıştır.
+*/
 html, body {
     margin: 0;
     padding: 0;
@@ -20,16 +53,54 @@ html, body {
     word-spacing: 4px;
     line-height: 2;
     font-family: "Outfit", sans-serif;
+    padding-top: 75px;
 }
+
+/* ******HEADER VE MENÜ AYARLARI****** */
+/* 
+    Sabit pozisyonlu header ve menü için:
+    - Konumlandırma
+    - Arkaplan ve blur efektleri
+    - Geçiş animasyonları
+    - Responsive davranış
+    ayarları yapılmıştır.
+*/
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 8px 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--bg-dark);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
 }
+
+.header.scrolled {
+    background: rgba(8, 16, 32, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 6px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header.scrolling {
+    background: rgba(8, 16, 32, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 0;
+}
+
 .menu {
-    background: rgba(10, 20, 40, 0.904);
-    backdrop-filter: blur(12px);
+    background: rgba(8, 16, 32, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: none;
     width: 65%;
     height: 60px;
@@ -37,14 +108,36 @@ html, body {
     justify-content: center;
     align-items: center; 
     border-radius: 16px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    transition: transform 0.3s ease;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
+.header.scrolled .menu {
+    transform: scale(0.98);
+    background: rgba(8, 16, 32, 0.75);
+    height: 50px;
+    border-radius: 12px;
+    margin-top: -2px;
+}
+
+.header.scrolling .menu {
+    background: rgba(8, 16, 32, 0.82);
+    transform: scale(0.99);
+    height: 55px;
+    border-radius: 14px;
+}
+
 .menu:hover {
-    transform: translateY(-2px);
-    box-shadow: rgba(0, 0, 0, 0.562) 0 2px 10px;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(8, 16, 32, 0.85);
 }
+
+.header.scrolled .menu:hover {
+    transform: translateY(-1px) scale(0.99);
+}
+
 .menu .anasayfa, .menu .notlar.active, .menu .kaynaklar.active, 
 .menu .guncelleme.active, .menu .sosyal.active {
     background: var(--gradient-primary);
@@ -123,6 +216,16 @@ html, body {
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+/* ******BANNER AYARLARI****** */
+/* 
+    Ana sayfa ve alt sayfalar için banner:
+    - Yükseklik ve genişlik
+    - Arkaplan efektleri
+    - İçerik düzeni
+    - Yazı stilleri
+    ayarları yapılmıştır.
+*/
 .banner {
     display: flex;
     height: 800px;
@@ -130,16 +233,11 @@ html, body {
     align-items: center;     
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(
-        100deg,
-        rgba(10, 20, 40, 0.308) 0%,
-        rgba(15, 30, 60, 0.308) 25%,
-        rgba(20, 40, 80, 0.308) 50%,
-        rgba(15, 30, 60, 0.308) 75%,
-        rgba(10, 20, 40, 0.308) 100%
-    );
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
     border: #15398015 solid 1px;
     box-shadow: #0f2e6b1c 0 0 3px;
+    margin-top: 10px;
 }
 
 .banner.sub-page {
@@ -158,6 +256,151 @@ html, body {
     line-height: 1.5;
     font-size: 23px;
 }
+
+/* ******ANA İÇERİK CONTAINER AYARLARI****** */
+/* 
+    İki sütunlu ana içerik düzeni için:
+    - Flex yapısı
+    - Boşluk ve hizalama
+    - Responsive davranış
+    ayarları yapılmıştır.
+*/
+.container {
+    display: flex;
+}
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: #C8AA6E;
+    gap: 40px;
+    margin-left: 50px;
+    padding: 0 50px 0 20px;
+}
+
+/* ******İÇERİK KARTLARI AYARLARI****** */
+/* 
+    İçerik kartları için:
+    - Boyut ve boşluklar
+    - Arkaplan ve border
+    - Hover efektleri
+    - İç içerik düzeni
+    ayarları yapılmıştır.
+*/
+.kart {
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-width: 380px;
+    height: auto;
+    min-height: 690px;
+    margin-top: 50px;
+    padding: 25px;
+    border: var(--border-color) solid 1px;
+    border-radius: 23px;
+    transition: transform 400ms ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.kart:hover {
+    transform: scale(1.02) translateY(-10px);
+    border: #C8AA6E solid 1.8px;
+}
+.kart hr {
+    color: #C8AA6E;
+    width: 15%;
+    border: 3px solid #C8AA6E;
+    border-radius: 10px;
+    transition: width 400ms;
+}
+.kart:hover hr {
+    width: 90%;
+}
+.kart h2 {
+    margin-left: 35px;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 29px;
+}
+.kart p {
+    margin: 15px 0;
+    font-size: 16.1px;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.738);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.notes-card {
+    width: 100% !important;
+    max-width: 1400px !important;
+    min-height: auto !important;
+    margin: 50px auto;
+    padding: 40px !important;
+}
+
+.notes-card > .kart {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    max-width: none;
+}
+
+.notes-card > .kart > .kart {
+    flex: 1;
+    min-height: auto;
+    margin-top: 30px;
+    max-width: none;
+    display: inline-block;
+    width: calc(50% - 15px);
+    vertical-align: top;
+}
+
+.notes-card > .kart > .kart:first-of-type {
+    margin-right: 30px;
+}
+
+.notes-card .kart p {
+    margin: 15px 0;
+}
+
+.notes-card .kart a {
+    color: #C8AA6E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notes-card .kart a:hover {
+    color: #db9200;
+}
+
+.notes-card .kart a i {
+    font-size: 14px;
+}
+
+.notes-card .kart strong {
+    color: #C8AA6E;
+    font-size: 18px;
+}
+
+/* ******YAN PANEL AYARLARI****** */
+/* 
+    Aside bölümü için:
+    - Konumlandırma
+    - Kartların düzeni
+    - İstatistik çubukları
+    - Hover efektleri
+    ayarları yapılmıştır.
+*/
 .aside {
     position: relative;
     display: flex;
@@ -168,7 +411,9 @@ html, body {
     min-height: 900px;
     border: 1px double var(--border-color);
     border-radius: 18px;
-    background: var(--bg-card-light);
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 25px;
     gap: 25px;
 }
@@ -184,7 +429,9 @@ html, body {
 }
 
 .aside-card {
-    background: var(--bg-card);
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 20px;
@@ -308,126 +555,15 @@ html, body {
     width: 3%;
 }
 
-.container {
-    display: flex;
-}
-.content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    color: #C8AA6E;
-    gap: 40px;
-    margin-left: 50px;
-    padding: 0 50px 0 20px;
-}
-.kart {
-    background: linear-gradient(
-        90deg,
-        rgba(10, 20, 40, 0.308) 0%,
-        rgba(15, 30, 60, 0.308) 25%,
-        rgba(20, 40, 80, 0.308) 50%,
-        rgba(15, 30, 60, 0.308) 75%,
-        rgba(10, 20, 40, 0.308) 100%
-    );
-    max-width: 380px;
-    height: auto;
-    min-height: 690px;
-    margin-top: 50px;
-    padding: 25px;
-    border: #c8aa6e1f solid 1px;
-    border-radius: 23px;
-    transition: transform 400ms ease-in-out;
-}
-.kart:hover {
-    transform: scale(1.02) translateY(-10px);
-    border: #C8AA6E solid 1.8px;
-}
-.kart hr {
-    color: #C8AA6E;
-    width: 15%;
-    border: 3px solid #C8AA6E;
-    border-radius: 10px;
-    transition: width 400ms;
-}
-.kart:hover hr {
-    width: 90%;
-}
-.kart h2 {
-    margin-left: 35px;
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 29px;
-}
-.kart p {
-    margin: 15px 0;
-    font-size: 16.1px;
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.738);
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.notes-card {
-    width: 100% !important;
-    max-width: 1400px !important;
-    min-height: 800px;
-    margin: 50px auto;
-}
-
-.notes-card > .kart {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    max-width: none;
-}
-
-.notes-card > .kart > .kart {
-    flex: 1;
-    min-height: auto;
-    margin-top: 30px;
-    max-width: none;
-    display: inline-block;
-    width: calc(50% - 15px);
-    vertical-align: top;
-}
-
-.notes-card > .kart > .kart:first-of-type {
-    margin-right: 30px;
-}
-
-.notes-card .kart p {
-    margin: 15px 0;
-}
-
-.notes-card .kart a {
-    color: #C8AA6E;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.notes-card .kart a:hover {
-    color: #db9200;
-}
-
-.notes-card .kart a i {
-    font-size: 14px;
-}
-
-.notes-card .kart strong {
-    color: #C8AA6E;
-    font-size: 18px;
-}
-
+/* ******SOSYAL MEDYA KARTLARI AYARLARI****** */
+/* 
+    Sosyal medya sayfası kartları için:
+    - Grid düzeni
+    - Kart tasarımı
+    - İkon ve bağlantı stilleri
+    - Hover efektleri
+    ayarları yapılmıştır.
+*/
 .social-cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -438,8 +574,10 @@ html, body {
 }
 
 .social-card {
-    background: rgba(10, 20, 40, 0.5);
-    border: 1px solid rgba(200, 170, 110, 0.1);
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 25px;
     margin-right: 50px;
@@ -497,7 +635,61 @@ html, body {
     font-size: 16px;
 }
 
-/* Responsive Tasarım */
+/* ******KAYNAKLAR SAYFASI KARTLARI AYARLARI****** */
+/* 
+    Kaynaklar sayfası kartları için:
+    - Grid düzeni
+    - Kart boyutları
+    - Responsive davranış
+    - Hover efektleri
+    ayarları yapılmıştır.
+*/
+.sources-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sources-container .kart {
+    min-height: auto;
+    margin-top: 0;
+    height: 100%;
+    width: 600px;
+    padding: 35px;
+    flex-shrink: 0;
+}
+
+.sources-container .kart h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 26px;
+}
+
+.sources-container .kart p {
+    margin: 25px 0;
+    font-size: 15px;
+}
+
+.sources-container .kart a {
+    margin: 5px 0;
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* ******RESPONSIVE TASARIM AYARLARI****** */
+/* 
+    Farklı ekran boyutları için:
+    - Breakpoint tanımları
+    - İçerik düzeni değişiklikleri
+    - Font boyutu ayarlamaları
+    - Boşluk düzenlemeleri
+    ayarları yapılmıştır.
+*/
 @media screen and (max-width: 1400px) {
     .container {
         flex-direction: column;
@@ -545,6 +737,17 @@ html, body {
     .notes-card > .kart > .kart {
         width: 100%;
         margin-right: 0;
+    }
+
+    .sources-container {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .sources-container .kart {
+        width: 100%;
+        max-width: 700px;
+        padding: 25px;
     }
 }
 

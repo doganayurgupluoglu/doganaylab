@@ -1,6 +1,34 @@
 // Başlangıç tarihi (13 Şubat 2025)
 const startDate = new Date('2025-02-10');
 
+// Header scroll efekti
+const header = document.querySelector('.header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    // Scroll pozisyonuna göre header'ın görünümünü ayarla
+    if (currentScroll > 100) {
+        header.classList.add('scrolled');
+        header.classList.remove('scrolling');
+    } else if (currentScroll > 30) {
+        header.classList.add('scrolling');
+        header.classList.remove('scrolled');
+    } else {
+        header.classList.remove('scrolled', 'scrolling');
+    }
+    
+    // Scroll yönüne göre ince ayar
+    if (currentScroll > lastScroll && currentScroll > 30) {
+        header.style.transform = 'translateY(-2px)';
+    } else {
+        header.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+});
+
 function updateDuration() {
     const now = new Date();
     const diff = now - startDate;
