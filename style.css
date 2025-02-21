@@ -1,102 +1,113 @@
+:root {
+    --primary-color: #C8AA6E;
+    --primary-hover: #db9200;
+    --bg-dark: rgba(6, 14, 29, 0.856);
+    --bg-card: rgba(10, 20, 40, 0.5);
+    --bg-card-light: rgba(10, 20, 40, 0.308);
+    --text-light: rgba(255, 255, 255, 0.738);
+    --border-color: rgba(200, 170, 110, 0.1);
+    --transition-default: all 0.3s ease;
+}
+
 html, body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background: rgba(6, 14, 29, 0.856);
+    background: var(--bg-dark);
     word-spacing: 4px;
     line-height: 2;
-    font-family: "Outfit", serif;
-    
+    font-family: "Outfit", sans-serif;
 }
 .header {
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 .menu {
     background: rgba(10, 20, 40, 0.904);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    border: none;
     width: 65%;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center; 
-    border-radius: 15px;
+    border-radius: 16px;
     margin-bottom: 20px;
     margin-top: 15px;
-    transition: all 250ms ease-in-out;
+    transition: transform 0.3s ease;
 }
 .menu:hover {
     transform: translateY(-2px);
     box-shadow: rgba(0, 0, 0, 0.562) 0 2px 10px;
 }
 .menu .anasayfa {
-    background-color: #db9200;
+    background: #db9200;
     color: rgba(6, 14, 29, 0.856);
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition: all 200ms;
+    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
 }
 .menu .anasayfa:hover {
-    background-color: #04021f;
-    color: #C8AA6E;
-    border-radius: 10px;
-
-}
-
-.menu .anasayfa i {
-    background-color: #db9200;
+    background: #C8AA6E;
     color: rgba(6, 14, 29, 0.856);
-    transition: all 200ms;
 }
-.menu .anasayfa:hover i {
-    background-color: #04021f;
-    color: #C8AA6E;
+.menu .anasayfa i {
+    color: inherit;
 }
-.menu a{
-    display: inline-block;
-    text-decoration:none;
-    background-color: #db920000;
-    color: #C8AA6E;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
+.menu a {
+    position: relative;
+    padding: 8px 20px;
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 350;
-    line-height: 40px;
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-weight: 300px;
-    font-style: normal;
-    transition: all 200ms;
+    text-decoration: none;
+    transition: var(--transition-default);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: inherit;
+}
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(219, 146, 0, 0.1);
+    border-radius: 8px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
 }
 .menu a:hover {
-    background-color: #db9200;
-    color: rgba(6, 14, 29, 0.856);
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}    
-
-
+    color: #db9200;
+}
+.menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 .menu ul {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items:center; 
-    list-style-type: none;
-    padding-right: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0 30px;
+}
+.menu ul li {
+    position: relative;
+}
+.menu ul li i {
+    color: inherit;
+    font-size: 18px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
 }
 .menu a:hover i {
-    background-color: #db9200;
-    color: rgba(6, 14, 29, 0.856);
+    transform: translateY(-2px);
+    color: inherit;
 }
-
 .banner {
     display: flex;
     height: 800px;
@@ -113,47 +124,178 @@ html, body {
         rgba(10, 20, 40, 0.308) 100%
     );
     border: #15398015 solid 1px;
-    box-shadow: #0f2e6b1c 0 0 3px ;
+    box-shadow: #0f2e6b1c 0 0 3px;
 }
+
+.banner.sub-page {
+    height: 400px;
+}
+
 .banner h1 {
     font-size: 80px;
-    color: #C8AA6E;
-    line-height: 0;
+    color: var(--primary-color);
+    line-height: 1;
     margin-bottom: 60px;
 }
 .banner p {
-    color: rgba(255, 255, 255, 0.738);
+    color: var(--text-light);
     letter-spacing: 1px;
-    line-height: 0.1;
+    line-height: 1.5;
     font-size: 23px;
 }
 .aside {
+    position: relative;
     display: flex;
-    margin-left: auto;
+    flex-direction: column;
+    margin: 50px;
     width: 450px;
-    height: 900px;
-    border: #c8aa6e1f double 1px;
-    margin-top: 50px;
-    margin-right: 300px;
+    height: auto;
+    min-height: 900px;
+    border: 1px double var(--border-color);
     border-radius: 18px;
-    background: rgba(10, 20, 40, 0.308);
-
-
+    background: var(--bg-card-light);
+    padding: 25px;
+    gap: 25px;
 }
+
+.aside::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: 90%;
+    width: 3px;
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-hover));
+}
+
+.aside-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: var(--transition-default);
+    flex-shrink: 0;
+}
+
+.aside-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200, 170, 110, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.aside-card h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aside-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.aside-card .icon {
+    color: var(--primary-hover);
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.aside-card .info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: var(--text-light);
+}
+
+.aside-card .info-row i {
+    color: var(--primary-color);
+    min-width: 16px;
+}
+
+.aside-card .info-row a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+
+.aside-card .info-row a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.skills-section {
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(10, 20, 40, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(200, 170, 110, 0.1);
+}
+
+.skills-section h2 {
+    color: #C8AA6E;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-item .info-row {
+    margin-bottom: 10px;
+}
+
+.skill-item .info-row i {
+    font-size: 18px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(200, 170, 110, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #C8AA6E, #db9200);
+    border-radius: 3px;
+    transition: width 1s ease-in-out;
+}
+
+.html-progress {
+    width: 80%;
+}
+
+.css-progress {
+    width: 50%;
+}
+
+.js-progress {
+    width: 3%;
+}
+
 .container {
     display: flex;
-    
 }
 .content {
-    flex:1;
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     color: #C8AA6E;
     gap: 40px;
-    margin-left: 300px;
-}   
+    margin-left: 50px;
+    padding: 0 50px 0 20px;
+}
 .kart {
     background: linear-gradient(
         90deg,
@@ -164,9 +306,10 @@ html, body {
         rgba(10, 20, 40, 0.308) 100%
     );
     max-width: 380px;
-    height: 690px;
-    margin-top: 90px;
-    padding: 10px;
+    height: auto;
+    min-height: 690px;
+    margin-top: 50px;
+    padding: 25px;
     border: #c8aa6e1f solid 1px;
     border-radius: 23px;
     transition: transform 400ms ease-in-out;
@@ -189,17 +332,404 @@ html, body {
     margin-left: 35px;
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
-    font-weight: 600px;
+    font-weight: 600;
     font-style: normal;
     font-size: 29px;
 }
 .kart p {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 15px 0;
     font-size: 16.1px;
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
-    font-weight: 600px;
+    font-weight: 400;
     font-style: normal;
     color: rgba(255, 255, 255, 0.738);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.menu .notlar.active {
+    background: #db9200;
+    color: rgba(6, 14, 29, 0.856);
+    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
+}
+
+.menu .notlar.active:hover {
+    background: #C8AA6E;
+    color: rgba(6, 14, 29, 0.856);
+}
+
+.menu .notlar.active i {
+    color: inherit;
+}
+
+.menu .kaynaklar.active {
+    background: #db9200;
+    color: rgba(6, 14, 29, 0.856);
+    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
+}
+
+.menu .kaynaklar.active:hover {
+    background: #C8AA6E;
+    color: rgba(6, 14, 29, 0.856);
+}
+
+.menu .kaynaklar.active i {
+    color: inherit;
+}
+
+.menu .guncelleme.active {
+    background: #db9200;
+    color: rgba(6, 14, 29, 0.856);
+    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
+}
+
+.menu .guncelleme.active:hover {
+    background: #C8AA6E;
+    color: rgba(6, 14, 29, 0.856);
+}
+
+.menu .guncelleme.active i {
+    color: inherit;
+}
+
+.menu .sosyal.active {
+    background: #db9200;
+    color: rgba(6, 14, 29, 0.856);
+    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
+}
+
+.menu .sosyal.active:hover {
+    background: #C8AA6E;
+    color: rgba(6, 14, 29, 0.856);
+}
+
+.menu .sosyal.active i {
+    color: inherit;
+}
+
+.notes-card {
+    width: 100% !important;
+    max-width: 1400px !important;
+    min-height: 800px;
+    margin: 50px auto;
+}
+
+.notes-card > .kart {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    max-width: none;
+}
+
+.notes-card > .kart > .kart {
+    flex: 1;
+    min-height: auto;
+    margin-top: 30px;
+    max-width: none;
+    display: inline-block;
+    width: calc(50% - 15px);
+    vertical-align: top;
+}
+
+.notes-card > .kart > .kart:first-of-type {
+    margin-right: 30px;
+}
+
+.notes-card .kart p {
+    margin: 15px 0;
+}
+
+.notes-card .kart a {
+    color: #C8AA6E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notes-card .kart a:hover {
+    color: #db9200;
+}
+
+.notes-card .kart a i {
+    font-size: 14px;
+}
+
+.notes-card .kart strong {
+    color: #C8AA6E;
+    font-size: 18px;
+}
+
+.social-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.social-card {
+    background: rgba(10, 20, 40, 0.5);
+    border: 1px solid rgba(200, 170, 110, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    margin-right: 50px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200, 170, 110, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-card .icon {
+    font-size: 40px;
+    color: #db9200;
+    margin-bottom: 20px;
+}
+
+.social-card h3 {
+    color: #C8AA6E;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-card p {
+    color: rgba(255, 255, 255, 0.738);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.social-card a {
+    color: #C8AA6E;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-card a:hover {
+    color: #db9200;
+    transform: translateY(-2px);
+}
+
+.social-card a i {
+    font-size: 16px;
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 1400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .aside {
+        width: auto;
+        min-height: auto;
+        margin: 30px auto;
+        max-width: 1200px;
+    }
+
+    .content {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .notes-card {
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .menu {
+        width: 90%;
+    }
+
+    .banner h1 {
+        font-size: 60px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+
+    .social-cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .social-card {
+        margin-right: 0;
+    }
+
+    .notes-card > .kart > .kart {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 95%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: 200px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .banner {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .banner.sub-page {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .banner p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .content {
+        padding: 0 15px;
+    }
+
+    .kart {
+        margin-top: 30px;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .kart h2 {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .aside {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .aside-card {
+        padding: 15px;
+    }
+
+    .aside-card h3 {
+        font-size: 18px;
+    }
+
+    .aside-card p {
+        font-size: 14px;
+    }
+
+    .skill-bar {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        margin: 10px auto;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .kart {
+        padding: 15px;
+    }
+
+    .kart h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .kart p {
+        font-size: 14px;
+    }
+
+    .social-card {
+        padding: 15px;
+    }
+
+    .social-card h3 {
+        font-size: 20px;
+    }
+
+    .social-card p {
+        font-size: 14px;
+    }
+
+    .social-card a {
+        font-size: 14px;
+    }
+}
+
+/* Yatay mobil cihazlar için */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .banner {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .banner.sub-page {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        position: relative;
+        z-index: 100;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: auto;
+        padding: 8px 15px;
+    }
 }
