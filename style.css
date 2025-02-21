@@ -7,6 +7,8 @@
     --text-light: rgba(255, 255, 255, 0.738);
     --border-color: rgba(200, 170, 110, 0.1);
     --transition-default: all 0.3s ease;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    --gradient-dark: linear-gradient(135deg, rgba(10, 20, 40, 0.904), rgba(15, 30, 60, 0.904));
 }
 
 html, body {
@@ -43,17 +45,25 @@ html, body {
     transform: translateY(-2px);
     box-shadow: rgba(0, 0, 0, 0.562) 0 2px 10px;
 }
-.menu .anasayfa {
-    background: #db9200;
-    color: rgba(6, 14, 29, 0.856);
+.menu .anasayfa, .menu .notlar.active, .menu .kaynaklar.active, 
+.menu .guncelleme.active, .menu .sosyal.active {
+    background: var(--gradient-primary);
+    color: var(--bg-dark);
     box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
-.menu .anasayfa:hover {
-    background: #C8AA6E;
-    color: rgba(6, 14, 29, 0.856);
+.menu .anasayfa:hover, .menu .notlar.active:hover, .menu .kaynaklar.active:hover,
+.menu .guncelleme.active:hover, .menu .sosyal.active:hover {
+    background: var(--gradient-dark);
+    color: var(--primary-color);
 }
-.menu .anasayfa i {
+.menu .anasayfa i, .menu .notlar.active i, .menu .kaynaklar.active i,
+.menu .guncelleme.active i, .menu .sosyal.active i {
     color: inherit;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 .menu a {
     position: relative;
@@ -99,14 +109,19 @@ html, body {
     position: relative;
 }
 .menu ul li i {
-    color: inherit;
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
     font-size: 18px;
     margin-right: 8px;
     transition: transform 0.3s ease;
 }
 .menu a:hover i {
     transform: translateY(-2px);
-    color: inherit;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 .banner {
     display: flex;
@@ -199,9 +214,13 @@ html, body {
 }
 
 .aside-card .icon {
-    color: var(--primary-hover);
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
     font-size: 24px;
     margin-bottom: 0;
+    position: relative;
 }
 
 .aside-card .info-row {
@@ -213,7 +232,10 @@ html, body {
 }
 
 .aside-card .info-row i {
-    color: var(--primary-color);
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
     min-width: 16px;
 }
 
@@ -251,6 +273,10 @@ html, body {
 }
 
 .skill-item .info-row i {
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
     font-size: 18px;
 }
 
@@ -265,7 +291,7 @@ html, body {
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, #C8AA6E, #db9200);
+    background: var(--gradient-primary);
     border-radius: 3px;
     transition: width 1s ease-in-out;
 }
@@ -346,66 +372,6 @@ html, body {
     color: rgba(255, 255, 255, 0.738);
     line-height: 1.8;
     text-align: justify;
-}
-
-.menu .notlar.active {
-    background: #db9200;
-    color: rgba(6, 14, 29, 0.856);
-    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
-}
-
-.menu .notlar.active:hover {
-    background: #C8AA6E;
-    color: rgba(6, 14, 29, 0.856);
-}
-
-.menu .notlar.active i {
-    color: inherit;
-}
-
-.menu .kaynaklar.active {
-    background: #db9200;
-    color: rgba(6, 14, 29, 0.856);
-    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
-}
-
-.menu .kaynaklar.active:hover {
-    background: #C8AA6E;
-    color: rgba(6, 14, 29, 0.856);
-}
-
-.menu .kaynaklar.active i {
-    color: inherit;
-}
-
-.menu .guncelleme.active {
-    background: #db9200;
-    color: rgba(6, 14, 29, 0.856);
-    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
-}
-
-.menu .guncelleme.active:hover {
-    background: #C8AA6E;
-    color: rgba(6, 14, 29, 0.856);
-}
-
-.menu .guncelleme.active i {
-    color: inherit;
-}
-
-.menu .sosyal.active {
-    background: #db9200;
-    color: rgba(6, 14, 29, 0.856);
-    box-shadow: 0 2px 10px rgba(219, 146, 0, 0.3);
-}
-
-.menu .sosyal.active:hover {
-    background: #C8AA6E;
-    color: rgba(6, 14, 29, 0.856);
-}
-
-.menu .sosyal.active i {
-    color: inherit;
 }
 
 .notes-card {
@@ -492,7 +458,10 @@ html, body {
 
 .social-card .icon {
     font-size: 40px;
-    color: #db9200;
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
     margin-bottom: 20px;
 }
 
