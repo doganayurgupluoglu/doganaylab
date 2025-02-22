@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
-    Bu HTML dosyası, geliştirdiğim projeleri sergiler.
-    Sayfa yapısı:
-    1. Header: Sabit pozisyonlu navigasyon menüsü
-    2. Banner: Sayfa başlığı ve kısa açıklama
-    3. Container: İki sütunlu ana içerik bölümü
-        - Content: Proje kartları
-        - Aside: Yan bilgi paneli (öğrenim süreci, kaynaklar, hedefler, istatistikler)
-    
-    Her proje kartı şunları içerir:
-    - Proje adı
-    - Açıklama
-    - Kullanılan teknolojiler
-    - Görsel
-    - GitHub bağlantısı
--->
 <head>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -74,27 +58,22 @@
     <div class="container">
         <!-- ******PROJELER BÖLÜMÜ BAŞLANGICI****** -->
         <div class="content">
-            <div class="kart notes-card">
-                <h2>Projeler</h2>
-                <hr>
-                <!-- ******PROJE KARTLARI CONTAINER BAŞLANGICI****** -->
-                <div class="projects-container">
-                    <!-- ******TOPBAR PROJESİ KARTI****** -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://camo.githubusercontent.com/5c2594499273981ac047f4f1d431874c514185b04cbc2f7eea92a43740d6ee27/68747470733a2f2f646f67616e61796c61622e636f6d2f666f746f677261666c61722f746f706261722e706e67" alt="Topbar Project Preview">
+            <div class="projects-container">
+                <!-- ******TOPBAR PROJESİ KARTI****** -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://camo.githubusercontent.com/5c2594499273981ac047f4f1d431874c514185b04cbc2f7eea92a43740d6ee27/68747470733a2f2f646f67616e61796c61622e636f6d2f666f746f677261666c61722f746f706261722e706e67" alt="Topbar Project Preview">
+                    </div>
+                    <div class="project-content">
+                        <h3>Topbar with Search</h3>
+                        <p>Modern ve kullanışlı bir navigation bar tasarımı. Arama çubuğu, giriş ve kayıt olma butonları içeren responsive bir header komponenti.</p>
+                        <div class="project-tech">
+                            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
                         </div>
-                        <div class="project-content">
-                            <h3>Topbar with Search</h3>
-                            <p>Modern ve kullanışlı bir navigation bar tasarımı. Arama çubuğu, giriş ve kayıt olma butonları içeren responsive bir header komponenti.</p>
-                            <div class="project-tech">
-                                <span><i class="fa-brands fa-html5"></i> HTML5</span>
-                                <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                            </div>
-                            <a href="https://github.com/doganayurgupluoglu/topbar" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub'da İncele
-                            </a>
-                        </div>
+                        <a href="https://github.com/doganayurgupluoglu/topbar" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub'da İncele
+                        </a>
                     </div>
                 </div>
             </div>

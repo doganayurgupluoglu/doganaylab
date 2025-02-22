@@ -1,4 +1,4 @@
-# 🌱 DoganayLab
+# [🌱 DoganayLab](https://doganaylab.com/)
 
 Front-end öğrenme yolculuğumu ve ilk adımlarımı paylaştığım kişisel web sitem.
 
@@ -24,7 +24,7 @@ Bu web sitesi, front-end geliştirme öğrenme sürecimin bir parçası olarak o
 
 - HTML5
 - CSS3 (Flexbox, Grid, Değişkenler)
-- Temel JavaScript
+- Temel JavaScript (Henüz js bilmiyorum birkaç basit script'e ihtiyacım vardı Bunun için Claude 3.5 Sonnet kullandım)
 - Font Awesome Icons
 
 ## 📂 Proje Yapısı

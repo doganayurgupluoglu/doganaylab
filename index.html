@@ -1,181 +1,171 @@
 <!DOCTYPE html>
-<!-- 
-    Bu HTML dosyası, DoganayLab web sitesinin ana sayfasıdır.
-    Sayfa yapısı:
-    1. Header: Sabit pozisyonlu navigasyon menüsü
-    2. Banner: Hoşgeldiniz mesajı ve site açıklaması
-    3. Container: İki sütunlu ana içerik bölümü
-        - Content: Kartlar halinde ana içerik
-        - Aside: Yan bilgi paneli (öğrenim süreci, kaynaklar, hedefler, istatistikler)
--->
+<html lang="tr">
 <head>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front-end öğrenme yolculuğumu ve deneyimlerimi paylaştığım kişisel web sitem">
+    <meta name="theme-color" content="#C8AA6E">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/9b300cf0c3.js" crossorigin="anonymous"></script>
-    <title>DoganayLab</title>
+    
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/9b300cf0c3.js" crossorigin="anonymous" defer></script>
+    
+    <title>DoganayLab - Front-end Öğrenme Yolculuğu</title>
 </head>
 <body>
- 
-    <!-- ******HEADER BAŞLANGICI****** -->
     <header class="header">
         <nav class="menu">
             <ul>
-                <li>              
-                    <a href="index.html" class="anasayfa"><i class="fa fa-house"></i>  Ana sayfa</a>
-                </li>
+                <li><a href="index.html" class="anasayfa"><i class="fa fa-house"></i>Ana sayfa</a></li>
+                <li><a href="notes.html" class="notlar"><i class="fa-solid fa-pencil"></i>Notlar</a></li>
+                <li><a href="sources.html" class="kaynaklar"><i class="fa-solid fa-folder-open"></i>Kaynaklar</a></li>
                 <li>
-                    <a href="notes.html" class="notlar"><i class="fa-solid fa-pencil"></i>  Notlar</a>
-                </li>
-                <li>
-                    <a href="sources.html" class="kaynaklar"><i class="fa-solid fa-folder-open"></i>  Kaynaklar</a>
-                </li>
-                <li>               
                     <a href="projects.html" class="projeler"><i class="fa-solid fa-code"></i>  Projeler</a>
-                </li>
-                <li>               
-                    <a href="index.html" class="hakkimda"><i class="fa-solid fa-user"></i>  Hakkımda</a>
                 </li>
                 <li>                
                     <a href="social.html" class="sosyal"><i class="fa-solid fa-thumbs-up"></i>  Sosyal Medya</a>
                 </li>
-                <li class="theme-toggle">
-                    <button id="lightMode" class="theme-btn"><i class="fa-regular fa-sun"></i></button>
-                    <button id="darkMode" class="theme-btn"><i class="fa-regular fa-moon"></i></button>
+                <li>
+                    <div class="theme-toggle">
+                        <button id="lightMode" class="theme-btn" aria-label="Açık tema"><i class="fa-regular fa-sun"></i></button>
+                        <button id="darkMode" class="theme-btn" aria-label="Koyu tema"><i class="fa-regular fa-moon"></i></button>
+                    </div>
                 </li>
             </ul>
-            </nav>
+        </nav>
     </header>
 
-    <!-- ******BANNER BAŞLANGICI****** -->
-    <div class="banner">
-        <h1>Doganay Lab'a Hoşgeldiniz</h1>
-        <p>Front-end web geliştirme öğrenim sürecimde deneyimler edindikçe<p> web sitemin tasarımını şekillendireceğim.</p>
-        <p>Bu projenin kaynak kodlarına <a href="https://github.com/doganayurgupluoglu/doganaylab" target="_blank" style="color: var(--primary-color); text-decoration: none;">GitHub hesabımdan</a> ulaşabilirsiniz.</p>
-    </div>  
-    
-    <!-- ******ANA İÇERİK BAŞLANGICI****** -->
-    <div class="container">
-        <!-- ******İÇERİK KARTLARI BAŞLANGICI****** -->
-        <div class="content">
-            <div class="kart">
-                <h2>Bu Web Sitesi Neden Var?</h2>
-                <hr>
-                <p>Kendi dijital alanımı oluşturma fikri beni heyecanlandırıyor. Bu alan, benim için sadece bir web sitesi değil, aynı zamanda bir öğrenme ve gelişim laboratuvarı.</p>
+    <main>
+        <section class="banner">
+            <h1>Doganay Lab'a Hoşgeldiniz</h1>
+            <p>Front-end web geliştirme öğrenim sürecimde deneyimler edindikçe web sitemin tasarımını şekillendireceğim.</p>
+            <p>Bu projenin kaynak kodlarına <a href="https://github.com/doganayurgupluoglu/doganaylab" target="_blank" rel="noopener noreferrer">GitHub hesabımdan</a> ulaşabilirsiniz.</p>
+        </section>
 
-                <p>Düşünün ki, gerçek dünyada bir bina inşa etmek için birçok uzmana ve kaynağa ihtiyacınız var. Ama dijital dünyada, sadece bilgisayarınız ve öğrenme azminizle kendi yapınızı kurabilirsiniz. İşte bu özgürlük ve sınırsız öğrenme potansiyeli beni cezbediyor.</p>          
-            </div>
-            <div class="kart">
-                <h2>Burada Neler Paylaşacağım?</h2>
-                <hr>
-                <p>Bu platform, benim için bir iş değil, tutkuyla sarıldığım bir hobi. Front-end yolculuğumun her adımını, ilk satır koddan başlayarak burada belgeleyeceğim. Her yeni öğrendiğim teknik, bu sitenin gelişimine yansıyacak.</p>
+        <div class="container">
+            <section class="content">
+                <div class="kart">
+                    <h2>Bu Web Sitesi Neden Var?</h2>
+                    <hr>
+                    <p>Kendi dijital alanımı oluşturma fikri beni heyecanlandırıyor. Bu alan, benim için sadece bir web sitesi değil, aynı zamanda bir öğrenme ve gelişim laboratuvarı.</p>
+
+                    <p>Düşünün ki, gerçek dünyada bir bina inşa etmek için birçok uzmana ve kaynağa ihtiyacınız var. Ama dijital dünyada, sadece bilgisayarınız ve öğrenme azminizle kendi yapınızı kurabilirsiniz. İşte bu özgürlük ve sınırsız öğrenme potansiyeli beni cezbediyor.</p>          
+                </div>
+                <div class="kart">
+                    <h2>Burada Neler Paylaşacağım?</h2>
+                    <hr>
+                    <p>Bu platform, benim için bir iş değil, tutkuyla sarıldığım bir hobi. Front-end yolculuğumun her adımını, ilk satır koddan başlayarak burada belgeleyeceğim. Her yeni öğrendiğim teknik, bu sitenin gelişimine yansıyacak.</p>
+                    
+                    <p>Özellikle benim gibi sıfırdan başlayanlar için, karşılaştığım zorlukları ve çözüm yollarını detaylı notlar halinde paylaşacağım. Her büyük değişikliği 'Güncellemeler' bölümünde görsel kanıtlarıyla birlikte sunacağım.</p> 
+                </div>
+                <div class="kart">
+                    <h2>Hatadan Korkma, Öğrenmeye Açık Ol</h2>
+                    <hr>
+                    <p>Yazılım dünyasında hata yapmak, öğrenmenin doğal bir parçası. Burada sadece başarılarımı değil, karşılaştığım zorlukları ve hataları da şeffaf bir şekilde paylaşacağım. Çünkü gerçek ilerleme, hatalardan ders çıkararak gelir.</p>
+
+                    <p>Bu yolculukta benimle aynı heyecanı paylaşıyorsan, deneyimlerimden faydalanabilir ve kendi yolculuğun için ilham alabilirsin. Unutma, her uzman bir zamanlar başlangıç seviyesindeydi.</p>
+                </div>
+                <div class="kart">
+                    <h2>Bu Bir Keşif Yolculuğu</h2>
+                    <hr>
+                    <p>Front-end geliştirme, sürekli yenilenen ve gelişen bir alan. Her gün yeni bir şey öğreniyor, yeni teknikler keşfediyor ve kendimi geliştiriyorum. Basit görünen her özellik, derinleştikçe yeni kapılar açıyor. Bu keşif sürecinde, küçük adımlarla büyük değişimler yaratmanın heyecanını yaşıyorum.</p>
+                </div>
+                <div class="kart">
+                    <h2>Birlikte Gelişelim!</h2>
+                    <hr>
+                    <p>Bu site, canlı bir gelişim günlüğü gibi sürekli evrilecek. Her yeni öğrendiğim teknik, her yeni keşfettiğim yaklaşım, sitenin yapısına ve görünümüne yansıyacak. Seni de bu heyecan verici yolculukta benimle birlikte ilerlemeye davet ediyorum. Çünkü öğrenmenin en keyifli yolu, deneyimleri paylaşmaktan geçiyor. 🚀</p>
+                </div>
+            </section>
+
+            <aside class="aside">
+                <div class="aside-card">
+                    <h3><i class="fa-solid fa-code icon"></i>Öğrenim Süreci</h3>
+                    <p id="learning-duration">Front-end geliştirme yolculuğuma başlayalı 8 gün oldu.</p>
+                    <div class="info-row">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Günlük çalışma: 6-9 saat</span>
+                    </div>
+                </div>
                 
-                <p>Özellikle benim gibi sıfırdan başlayanlar için, karşılaştığım zorlukları ve çözüm yollarını detaylı notlar halinde paylaşacağım. Her büyük değişikliği 'Güncellemeler' bölümünde görsel kanıtlarıyla birlikte sunacağım.</p> 
-            </div>
-            <div class="kart">
-                <h2>Hatadan Korkma, Öğrenmeye Açık Ol</h2>
-                <hr>
-                <p>Yazılım dünyasında hata yapmak, öğrenmenin doğal bir parçası. Burada sadece başarılarımı değil, karşılaştığım zorlukları ve hataları da şeffaf bir şekilde paylaşacağım. Çünkü gerçek ilerleme, hatalardan ders çıkararak gelir.</p>
+                <div class="aside-card">
+                    <h3><i class="fa-solid fa-book icon"></i>Kaynaklar</h3>
+                    <div class="info-row">
+                        <i class="fa-solid fa-check"></i>
+                        <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-check"></i>
+                        <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-check"></i>
+                        <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
+                    </div>
+                </div>
 
-                <p>Bu yolculukta benimle aynı heyecanı paylaşıyorsan, deneyimlerimden faydalanabilir ve kendi yolculuğun için ilham alabilirsin. Unutma, her uzman bir zamanlar başlangıç seviyesindeydi.</p>
-            </div>
-            <div class="kart">
-                <h2>Bu Bir Keşif Yolculuğu</h2>
-                <hr>
-                <p>Front-end geliştirme, sürekli yenilenen ve gelişen bir alan. Her gün yeni bir şey öğreniyor, yeni teknikler keşfediyor ve kendimi geliştiriyorum. Basit görünen her özellik, derinleştikçe yeni kapılar açıyor. Bu keşif sürecinde, küçük adımlarla büyük değişimler yaratmanın heyecanını yaşıyorum.</p>
-            </div>
-            <div class="kart">
-                <h2>Birlikte Gelişelim!</h2>
-                <hr>
-                <p>Bu site, canlı bir gelişim günlüğü gibi sürekli evrilecek. Her yeni öğrendiğim teknik, her yeni keşfettiğim yaklaşım, sitenin yapısına ve görünümüne yansıyacak. Seni de bu heyecan verici yolculukta benimle birlikte ilerlemeye davet ediyorum. Çünkü öğrenmenin en keyifli yolu, deneyimleri paylaşmaktan geçiyor. 🚀</p>
-            </div>
+                <div class="aside-card">
+                    <h3><i class="fa-solid fa-trophy icon"></i>Hedefler</h3>
+                    <div class="info-row">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Responsive Tasarım</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-star"></i>
+                        <span>JavaScript Temelleri</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-star"></i>
+                        <span>React Öğrenimi</span>
+                    </div>
+                </div>
+
+                <div class="aside-card">
+                    <h3><i class="fa-solid fa-chart-line icon"></i>İstatistikler</h3>
+                    <div class="skill-item">
+                        <div class="info-row">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML Yeteneklerim</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress html-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="info-row">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS Yeteneklerim</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress css-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="info-row">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JS Yeteneklerim</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress js-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
+    </main>
 
-        <!-- ******YAN PANEL BAŞLANGICI****** -->
-        <aside class="aside">
-            <div class="aside-card">
-                <h3><i class="fa-solid fa-code icon"></i>Öğrenim Süreci</h3>
-                <p id="learning-duration">Front-end geliştirme yolculuğuma başlayalı 8 gün oldu.</p>
-                <div class="info-row">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Günlük çalışma: 6-9 saat</span>
-                </div>
-            </div>
-            
-            <div class="aside-card">
-                <h3><i class="fa-solid fa-book icon"></i>Kaynaklar</h3>
-                <div class="info-row">
-                    <i class="fa-solid fa-check"></i>
-                    <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>
-                </div>
-                <div class="info-row">
-                    <i class="fa-solid fa-check"></i>
-                    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
-                </div>
-                <div class="info-row">
-                    <i class="fa-solid fa-check"></i>
-                    <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
-                </div>
-            </div>
-
-            <div class="aside-card">
-                <h3><i class="fa-solid fa-trophy icon"></i>Hedefler</h3>
-                <div class="info-row">
-                    <i class="fa-solid fa-star"></i>
-                    <span>Responsive Tasarım</span>
-                </div>
-                <div class="info-row">
-                    <i class="fa-solid fa-star"></i>
-                    <span>JavaScript Temelleri</span>
-                </div>
-                <div class="info-row">
-                    <i class="fa-solid fa-star"></i>
-                    <span>React Öğrenimi</span>
-                </div>
-            </div>
-
-            <div class="aside-card">
-                <h3><i class="fa-solid fa-chart-line icon"></i>İstatistikler</h3>
-                <div class="skill-item">
-                    <div class="info-row">
-                        <i class="fa-brands fa-html5"></i>
-                        <span>HTML Yeteneklerim</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress html-progress"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="info-row">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <span>CSS Yeteneklerim</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress css-progress"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="info-row">
-                        <i class="fa-brands fa-js"></i>
-                        <span>JS Yeteneklerim</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress js-progress"></div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-    </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
