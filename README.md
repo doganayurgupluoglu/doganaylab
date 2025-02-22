@@ -40,7 +40,7 @@ doganaylab/
 └── script.js          # JavaScript dosyası
 ```
 
-## 📱 Responsive Tasarım
+## 📱 Responsive Tasarım.
 
 Farklı ekran boyutlarına uyum sağlamaya çalışıyorum. Henüz mükemmel olmasa da, mobil cihazlarda da kullanılabilir bir deneyim sunmayı hedefliyorum.
 
