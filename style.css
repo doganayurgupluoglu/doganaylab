@@ -145,19 +145,63 @@ button {
     color: var(--primary-color);
     font-size: 18px;
     border-radius: 8px;
-    transition: var(--transition-default);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-card);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.menu a:hover::before {
+    transform: translateX(0);
+}
+
+.menu a.active {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 .menu a:hover, .menu a.active {
     color: var(--primary-hover);
+    border: 1px solid var(--border-color);
+}
+
+.menu a:hover:not(.active) {
     transform: translateY(-2px);
 }
 
 .menu a i {
-    color: transparent;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: var(--primary-color);
+    transition: var(--transition-default);
+}
+
+.menu a:hover i {
+    color: var(--primary-hover);
 }
 
 /* Theme Toggle */
@@ -386,10 +430,8 @@ button {
 }
 
 .project-tech i {
-    color: transparent;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: var(--primary-color);
+    transition: var(--transition-default);
 }
 
 .project-link {
@@ -404,6 +446,10 @@ button {
 .project-link:hover {
     color: var(--primary-hover);
     transform: translateX(5px);
+}
+
+.project-link:hover i {
+    color: var(--primary-hover);
 }
 
 /* Social Media Cards */
@@ -516,6 +562,11 @@ button {
     gap: 10px;
 }
 
+.aside-card i {
+    color: var(--primary-color);
+    transition: var(--transition-default);
+}
+
 .aside-card .info-row {
     display: flex;
     align-items: center;
@@ -525,10 +576,12 @@ button {
 }
 
 .aside-card .info-row i {
-    color: transparent;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: var(--primary-color);
+    transition: var(--transition-default);
+}
+
+.aside-card .info-row:hover i {
+    color: var(--primary-hover);
 }
 
 .aside-card .info-row a:hover {
@@ -726,6 +779,23 @@ button {
         width: 20px;
         height: 20px;
         font-size: 12px;
+    }
+
+    .menu a::before {
+        background: var(--bg-card-light);
+    }
+
+    .menu a.active {
+        background: var(--bg-card-light);
+    }
+
+    .menu a.active::after {
+        width: 50%;
+        bottom: -1px;
+    }
+
+    .menu a:hover {
+        transform: none;
     }
 }
 
