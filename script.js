@@ -47,10 +47,10 @@ class ThemeManager {
     
     setTheme(theme) {
         if (theme === this.THEMES.LIGHT) {
-            root.classList.add('light-mode');
+            root.classList.remove('dark-mode');
             this.themeToggle?.classList.remove('dark');
         } else {
-            root.classList.remove('light-mode');
+            root.classList.add('dark-mode');
             this.themeToggle?.classList.add('dark');
         }
     }
