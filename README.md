@@ -1,10 +1,10 @@
-# [🌱 DoganayLab](https://doganaylab.com/)
+# [🌱 DoganayLab](https://vercel.com/bosmang54s-projects/doganaylab/Ao15qBUTMURo1Psxtsxftc5EpXBM)
 
-Front-end öğrenme yolculuğumu ve ilk adımlarımı paylaştığım kişisel web sitem.
+Front-end öğrenme yolculuğumu ve ilk adımlarım ilk kişisel web sitem.
 
 ## 📝 Proje Hakkında
 
-Bu web sitesi, front-end geliştirme öğrenme sürecimin bir parçası olarak oluşturuldu. Yeni başlayan biri olarak, öğrendiklerimi uygulayarak ve deneyerek ilerlemeye çalışıyorum.
+Bu web sitesi, front-end geliştirme öğrenme sürecimin bir parçası olarak oluşturuldu.
 
 ### 🎯 Amaç
 
@@ -15,10 +15,7 @@ Bu web sitesi, front-end geliştirme öğrenme sürecimin bir parçası olarak o
 
 ## 🔄 Güncel Değişiklikler
 
-### Tema Değiştirme Özelliği (14.02.2024)
-- Basit bir aydınlık/karanlık mod desteği eklendi
-- Tema değiştirme butonu eklendi
-- Tema tercihi tarayıcıda saklanıyor
+- Artık aktif olarak kullanmıyorum başlıktaki linkten vercel üzerinden erişebilirsiniz.
 
 ## 🛠️ Kullanmaya Çalıştığım Teknolojiler
 
@@ -42,7 +39,7 @@ doganaylab/
 
 ## 📱 Responsive Tasarım.
 
-Farklı ekran boyutlarına uyum sağlamaya çalışıyorum. Henüz mükemmel olmasa da, mobil cihazlarda da kullanılabilir bir deneyim sunmayı hedefliyorum.
+Her cihazda mükemmel görünür.
 
 ## 🚀 Yerel Ortamda Çalıştırma
 
