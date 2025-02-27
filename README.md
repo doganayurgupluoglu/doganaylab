@@ -1,4 +1,4 @@
-# [🌱 DoganayLab](https://vercel.com/bosmang54s-projects/doganaylab/Ao15qBUTMURo1Psxtsxftc5EpXBM)
+# [🌱 DoganayLab](https://doganaylab-git-main-bosmang54s-projects.vercel.app/)
 
 Front-end öğrenme yolculuğumu ve ilk adımlarım ilk kişisel web sitem.
 
